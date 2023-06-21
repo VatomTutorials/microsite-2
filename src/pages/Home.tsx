@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useExperience } from "@vatom/experience-sdk";
 import './Common.css'
 //
@@ -8,7 +8,7 @@ const HomePage = () => {
 
   return (
 		<div>
-			<h1>Welcome to the Home page</h1>
+			<h1>Micro-Site Home</h1>
 			<button
 				onClick={() => {
           navigate("/about");
@@ -33,7 +33,7 @@ const HomePage = () => {
 				NFT Detail
 			</button>
 		</div>
-  )
+  );
 }
 //
 export default HomePage;
