@@ -4,15 +4,6 @@ import { useExperience, useBusiness, useUser } from "@vatom/experience-sdk";
 import './Common.css'
 
 
-/***
-function delay(milliseconds: number){
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
-}// delay
-***/
-
-
 const HomePage = () => {
 	const navigate = useNavigate();
 	const { navigateToWallet } = useExperience();
@@ -20,33 +11,36 @@ const HomePage = () => {
 	const user = useUser();
 
 
-	/***/
-	const delay = async (milliseconds: number) => {
+	// Instantiate promise instead of 'const delay = async ...'
+	// see https://alvarotrigo.com/blog/wait-1-second-javascript/
+	const delay = (milliseconds: number) => {
 			return new Promise(resolve => {
 					setTimeout(resolve, milliseconds);
 			});
-	}
-	/***/
+	}// delay()
 
 
-	/***/
 	const navigateToCheckForRewardsPage = async () => {
-		//const navigate = useNavigate();
-		//const { business, tokens } = useBusiness();
-		//const user = useUser();
-	
+		const loggingProperties = false;
+		
 		console.log('delay');
-		//console.log('Log tokens then delay');
-		//console.log(tokens);
-		await delay(2000);
-		//console.log('After delay: tokens, business, user');
-		//console.log(tokens);
-		//console.log(business);
-		//console.log(user);
+		
+		if (loggingProperties){
+			console.log('Log tokens then delay');
+			console.log(tokens);
+		}
+		
+		await delay(9000);
+		
+		if (loggingProperties){
+			console.log('After delay: tokens, business, user');
+			console.log(tokens);
+			console.log(business);
+			console.log(user);
+		}
 	
 		navigate("/check-for-reward");	
-	}
-	/***/
+	}// navigateToCheckForRewardsPage()
 
 
 	return (
