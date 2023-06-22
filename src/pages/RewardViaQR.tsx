@@ -3,9 +3,9 @@ import QrDist from "../assets/QrDist.png";
 import './Common.css'
 
 
-const NftOfferPage = () => {
+const RewardViaQRPage = () => {
   const navigate = useNavigate();
-
+  
   return (
 		<div>
 			<img src={QrDist} />
@@ -23,10 +23,10 @@ const NftOfferPage = () => {
           navigate("/check-for-reward");
         }}
 			>
-				Try Again
+				Check Again
 			</button>
 		</div>
   );
 }
 //
-export default NftOfferPage;
+export default RewardViaQRPage;

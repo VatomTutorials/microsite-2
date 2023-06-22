@@ -27,7 +27,7 @@ const HomePage = () => {
 			---
 			<button
 				onClick={() => {
-          navigate("/nft-detail");
+          navigate("/check-for-reward");
         }}
 			>
 				Check for reward token

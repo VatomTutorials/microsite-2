@@ -3,7 +3,7 @@ import { useExperience, useBusiness, useUser } from "@vatom/experience-sdk";
 import './Common.css'
 
 
-const NftDetailPage = () => {
+const CheckForRewardPage = () => {
   const navigate = useNavigate();
   const { navigateToNFTDetail } = useExperience();
   const { business, tokens } = useBusiness();
@@ -20,7 +20,7 @@ const NftDetailPage = () => {
 	if (found){
 		return (
 			<div>
-				<h1>You have a reward token in your wallet.</h1>
+				<h1>Reward token in wallet</h1>
 				<button
 					onClick={() => {
 						navigate("/home");
@@ -41,7 +41,7 @@ const NftDetailPage = () => {
 	}else{
 		return (
 			<div>
-				<h1>NFT Detail page</h1>
+				<h1>Reward not yet acquired</h1>
 				<button
 					onClick={() => {
 						navigate("/home");
@@ -52,14 +52,22 @@ const NftDetailPage = () => {
 				---
 				<button
 					onClick={() => {
-						navigate("/nft-offer");
+						navigate("/reward-automated");
 					}}
 				>
-					Acquire Reward token
+					Acquire automatically
+				</button>
+				---
+				<button
+					onClick={() => {
+						navigate("/reward-via-qr");
+					}}
+				>
+					Acquire via QR
 				</button>
 			</div>
 		);
 	}
 }
 //
-export default NftDetailPage;
+export default CheckForRewardPage;
