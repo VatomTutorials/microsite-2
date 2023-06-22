@@ -3,15 +3,6 @@ import { useExperience, useBusiness, useUser } from "@vatom/experience-sdk";
 import './Common.css'
 
 
-/***
-function delay(milliseconds){
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
-}// delay
-***/
-
-
 const CheckForRewardPage = () => {
   const navigate = useNavigate();
   const { navigateToNFTDetail } = useExperience();
@@ -20,10 +11,8 @@ const CheckForRewardPage = () => {
   const objectDefinitionId = 'RYHEO817ml';
   const found = tokens.find(t => t.studioInfo?.objectDefinitionId === objectDefinitionId);
 
-	console.log('Log tokens then delay');
+	console.log('Log: tokens, business, user, found');
 	console.log(tokens);
-	//await delay(200);
-	console.log('After delay: tokens, business, user, found');
 	console.log(business);
 	console.log(user);
 	console.log(found);
