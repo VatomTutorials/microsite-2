@@ -35,13 +35,14 @@ const HomePage = () => {
 		//const { business, tokens } = useBusiness();
 		//const user = useUser();
 	
-		console.log('Log tokens then delay');
-		console.log(tokens);
+		console.log('delay');
+		//console.log('Log tokens then delay');
+		//console.log(tokens);
 		await delay(200);
-		console.log('After delay: tokens, business, user');
-		console.log(tokens);
-		console.log(business);
-		console.log(user);
+		//console.log('After delay: tokens, business, user');
+		//console.log(tokens);
+		//console.log(business);
+		/console.log(user);
 	
 		navigate("/check-for-reward");	
 	}
@@ -69,8 +70,8 @@ const HomePage = () => {
 			---
 			<button
 				onClick={() => {
-					//navigate("/check-for-reward");
-					navigateToCheckForRewardsPage();
+					navigate("/check-for-reward");
+					//navigateToCheckForRewardsPage();
 				}}
 			>
 				Check for reward token
