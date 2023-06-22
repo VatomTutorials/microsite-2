@@ -3,6 +3,7 @@ import { ExperienceProvider } from '@vatom/experience-sdk';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import NftDetailPage from './pages/NftDetail';
+import NftOfferPage from './pages/NftOffer';
 //
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 					<Route path="/home" element={<HomePage />}></Route>
 					<Route path="/about" element={<AboutPage />}></Route>
 					<Route path="/nft-detail" element={<NftDetailPage />}></Route>
+					<Route path="/nft-offer" element={<NftOfferPage />}></Route>
 				</Routes>
 			</ExperienceProvider>
 		</BrowserRouter>

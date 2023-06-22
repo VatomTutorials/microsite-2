@@ -17,26 +17,49 @@ const NftDetailPage = () => {
 	console.log(user);
 	console.log(found);
 
-  return (
-		<div>
-			<h1>NFT Detail page</h1>
-			<button
-				onClick={() => {
-          navigate("/home");
-        }}
-			>
-				Home
-			</button>
-			---
-			<button
-				onClick={() => {
-          navigateToNFTDetail(found?.tokenId ?? '', business?.id ?? '');
-        }}
-			>
-				Show Detail
-			</button>
-		</div>
-  );
+	if (found){
+		return (
+			<div>
+				<h1>NFT Detail page</h1>
+				<button
+					onClick={() => {
+						navigate("/home");
+					}}
+				>
+					Home
+				</button>
+				---
+				<button
+					onClick={() => {
+						navigateToNFTDetail(found?.tokenId ?? '', business?.id ?? '');
+					}}
+				>
+					Show Detail
+				</button>
+			</div>
+		);
+	}else{
+		return (
+			<div>
+				<h1>NFT Detail page</h1>
+				<button
+					onClick={() => {
+						navigate("/home");
+					}}
+				>
+					Home
+				</button>
+				---
+				<button
+					onClick={() => {
+						navigate("/nft-offer");
+					}}
+				>
+					Acquire Token
+				</button>
+			</div>
+		);
+	}
 }
 //
 export default NftDetailPage;
