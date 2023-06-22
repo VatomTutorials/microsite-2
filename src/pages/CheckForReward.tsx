@@ -3,11 +3,13 @@ import { useExperience, useBusiness, useUser } from "@vatom/experience-sdk";
 import './Common.css'
 
 
+/***
 function delay(milliseconds){
     return new Promise(resolve => {
         setTimeout(resolve, milliseconds);
     });
 }// delay
+***/
 
 
 const CheckForRewardPage = () => {
