@@ -42,7 +42,7 @@ const HomePage = () => {
 		//console.log('After delay: tokens, business, user');
 		//console.log(tokens);
 		//console.log(business);
-		/console.log(user);
+		//console.log(user);
 	
 		navigate("/check-for-reward");	
 	}
