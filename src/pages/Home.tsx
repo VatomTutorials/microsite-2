@@ -30,7 +30,7 @@ const HomePage = () => {
 			console.log(tokens);
 		}
 		
-		await delay(9000);
+		await delay(2000);
 		
 		if (loggingProperties){
 			console.log('After delay: tokens, business, user');
@@ -76,7 +76,7 @@ const HomePage = () => {
 					navigateToCheckForRewardsPage();
 				}}
 			>
-				Alt delay check
+				2 sec delay check
 			</button>
 		</div>
 	);
