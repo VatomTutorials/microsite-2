@@ -1,14 +1,34 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useExperience } from "@vatom/experience-sdk";
 import './Common.css'
-//
+
+
 const AboutPage = () => {
+  const navigate = useNavigate();
+  const { navigateToExternalBrowser } = useExperience();
+
   return (
 		<div>
 			<h1>About page</h1>
-			<h3>v 0.0.001</h3>			
-			<Link to="/home"> Return to the Home page </Link>
+			<h3>v 0.0.2</h3>
+			
+			<button
+				onClick={() => {
+					navigate("/home");
+				}}
+			>
+				Home
+			</button>
+			---
+			<button
+				onClick={() => {
+					navigateToExternalBrowser('https://github.com/VatomTutorials/microsite-2');
+				}}
+			>
+				Get source code
+			</button>
 		</div>
-  )
+  );
 }
 //
 export default AboutPage;

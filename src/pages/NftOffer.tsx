@@ -9,11 +9,18 @@ const NftOfferPage = () => {
   return (
 		<div>
 			<img src={QrDist} />
-			<h1>Token Not Yet Acquired</h1>
-			<h3>Scan QR code then click 'Try Again'.</h3>
+			<h1>Scan QR code to get token</h1>
 			<button
 				onClick={() => {
-          navigate("/home");
+					navigate("/home");
+				}}
+			>
+				Home
+			</button>
+			---
+			<button
+				onClick={() => {
+          navigate("/nft-detail");
         }}
 			>
 				Try Again

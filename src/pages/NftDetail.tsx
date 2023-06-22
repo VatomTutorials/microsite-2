@@ -20,7 +20,7 @@ const NftDetailPage = () => {
 	if (found){
 		return (
 			<div>
-				<h1>NFT Detail page</h1>
+				<h1>You have a reward token in your wallet.</h1>
 				<button
 					onClick={() => {
 						navigate("/home");
@@ -34,7 +34,7 @@ const NftDetailPage = () => {
 						navigateToNFTDetail(found?.tokenId ?? '', business?.id ?? '');
 					}}
 				>
-					Show Detail
+					Show reward token detail
 				</button>
 			</div>
 		);
@@ -55,7 +55,7 @@ const NftDetailPage = () => {
 						navigate("/nft-offer");
 					}}
 				>
-					Acquire Token
+					Acquire Reward token
 				</button>
 			</div>
 		);

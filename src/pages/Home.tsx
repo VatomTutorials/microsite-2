@@ -30,7 +30,7 @@ const HomePage = () => {
           navigate("/nft-detail");
         }}
 			>
-				NFT Detail
+				Check for reward token
 			</button>
 		</div>
   );
