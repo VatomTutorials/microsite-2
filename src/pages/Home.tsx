@@ -38,7 +38,7 @@ const HomePage = () => {
 		console.log('delay');
 		//console.log('Log tokens then delay');
 		//console.log(tokens);
-		await delay(200);
+		await delay(2000);
 		//console.log('After delay: tokens, business, user');
 		//console.log(tokens);
 		//console.log(business);
@@ -75,6 +75,14 @@ const HomePage = () => {
 				}}
 			>
 				Check for reward token
+			</button>
+			---
+			<button
+				onClick={() => {
+					navigateToCheckForRewardsPage();
+				}}
+			>
+				Alt delay check
 			</button>
 		</div>
 	);
