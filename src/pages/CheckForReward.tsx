@@ -10,12 +10,21 @@ const CheckForRewardPage = () => {
 	const user = useUser();
   const objectDefinitionId = 'RYHEO817ml';
   const found = tokens.find(t => t.studioInfo?.objectDefinitionId === objectDefinitionId);
+	const loggingProperties = false;
 
-	console.log('Log: tokens, business, user, found');
-	console.log(tokens);
-	console.log(business);
-	console.log(user);
-	console.log(found);
+
+	const acquireToken = async () => {
+		//d
+	}// delay()
+
+
+	if (loggingProperties){
+		console.log('Log: tokens, business, user, found');
+		console.log(tokens);
+		console.log(business);
+		console.log(user);
+		console.log(found);
+	}
 
 	if (found){
 		return (
@@ -52,10 +61,10 @@ const CheckForRewardPage = () => {
 				---
 				<button
 					onClick={() => {
-						navigate("/reward-automated");
+						navigate("/reward-via-button");
 					}}
 				>
-					Acquire automatically
+					Show 'Get Token' button
 				</button>
 				---
 				<button
@@ -63,7 +72,7 @@ const CheckForRewardPage = () => {
 						navigate("/reward-via-qr");
 					}}
 				>
-					Acquire via QR
+					Show token QR code
 				</button>
 			</div>
 		);
