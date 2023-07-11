@@ -1,10 +1,19 @@
-import { useState } from "react"
+import React from "react"
 
 
-export function FetchPiiForm({ onSubmit }) {
-  const [piiKey, setPiiKey] = useState("");
+interface FetchPiiFormProps {
+  onSubmit: (data: string) => void;
+}
 
-  function handleSubmit(e) {
+
+export function FetchPiiForm({ onSubmit }: FetchPiiFormProps) {
+  const [piiKey, setPiiKey] = React.useState<string>("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  	setPiiKey(e.target.value);
+	};
+
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (piiKey === "") return;
 
@@ -20,7 +29,7 @@ export function FetchPiiForm({ onSubmit }) {
         <label htmlFor="piiKey">Pii Key: </label>
         <input
         	value={piiKey}
-          onChange={e => setPiiKey(e.target.value)}
+          onChange={handleChange}
           type="text"
           id="piiKey"
         />
