@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useUser } from "@vatom/experience-sdk";
 import { AddPiiForm } from "../components/AddPiiForm"
+import { FetchPiiForm } from "../components/FetchPiiForm"
 import './Common.css'
 
 
@@ -22,9 +23,18 @@ const PiiPage = () => {
 	}// addItem()
 
 
+	const fetchItemByKey = (key) => {
+		const value = campaignUserInfo[key];
+		console.log("Fetch by key:", key, value);
+	}// fetchItem()
+
+
   return (
 		<div>
 			<AddPiiForm onSubmit={addItem} />
+			<br/>
+			<FetchPiiForm onSubmit={fetchItemByKey} />
+			
 			<h1>Pii page</h1>
 			<h3>v 0.0.9</h3>
 			

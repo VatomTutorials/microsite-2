@@ -1,9 +1,20 @@
-import { useState } from "react"
+import React from "react"
 
 
-export function AddPiiForm({ onSubmit }) {
-  const [newItem, setNewItem] = useState({ piiKey: "", piiValue: "" });
-  const handleChange = e => {
+interface AddPiiFormProps {
+  onSubmit: (data: AddPiiFormData) => void;
+}
+
+
+interface AddPiiFormData {
+  piiKey: string;
+  piiValue: string;
+}
+
+
+export function AddPiiForm({ onSubmit }: AddPiiFormProps) {
+  const [newItem, setNewItem] = React.useState<AddPiiFormData>({ piiKey: "", piiValue: "" });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 		setNewItem(prevState => ({
 				...prevState,
@@ -12,7 +23,7 @@ export function AddPiiForm({ onSubmit }) {
 	};
 
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if ((newItem.piiKey === "") && (newItem.piiValue === "")) return;
 
