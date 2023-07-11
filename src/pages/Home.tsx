@@ -56,6 +56,14 @@ const HomePage = () => {
 			---
 			<button
 				onClick={() => {
+					navigate("/pii");
+				}}
+			>
+				Pii
+			</button>
+			---
+			<button
+				onClick={() => {
 					navigateToWallet();
 				}}
 			>

@@ -4,6 +4,7 @@ import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import CheckForRewardPage from './pages/CheckForReward';
 import NftOfferPage from './pages/NftOffer';
+import PiiPage from './pages/Pii';
 import RewardViaButtonPage from './pages/RewardViaButton';
 import RewardViaQRPage from './pages/RewardViaQR';
 //
@@ -17,6 +18,7 @@ function App() {
 					<Route path="/about" element={<AboutPage />}></Route>
 					<Route path="/check-for-reward" element={<CheckForRewardPage />}></Route>
 					<Route path="/nft-offer" element={<NftOfferPage />}></Route>
+					<Route path="/pii" element={<PiiPage />}></Route>
 					<Route path="/reward-via-button" element={<RewardViaButtonPage />}></Route>
 					<Route path="/reward-via-qr" element={<RewardViaQRPage />}></Route>
 				</Routes>
