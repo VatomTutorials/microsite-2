@@ -26,7 +26,8 @@ const PiiPage = () => {
 
 
 	const fetchItemByKey = (key: string) => {
-		const value = campaignUserInfo[key];
+		const info = campaignUserInfo as PiiObject;
+		const value = info[key];
 		console.log("Fetch by key:", key, value);
 	}// fetchItem()
 
