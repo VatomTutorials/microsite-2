@@ -6,7 +6,7 @@ interface AddPiiFormProps {
 }
 
 
-interface AddPiiFormData {
+export interface AddPiiFormData {
   piiKey: string;
   piiValue: string;
 }

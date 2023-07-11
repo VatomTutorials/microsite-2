@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useUser } from "@vatom/experience-sdk";
-import { AddPiiForm } from "../components/AddPiiForm"
+import { AddPiiForm, AddPiiFormData } from "../components/AddPiiForm"
 import { FetchPiiForm } from "../components/FetchPiiForm"
 import './Common.css'
+
+
+interface PiiObject {
+	[key: string]: string;
+}
 
 
 const PiiPage = () => {
@@ -10,20 +15,17 @@ const PiiPage = () => {
   const navigate = useNavigate();
   
   
-  function PiiObject(key,value){
-  	this[key] = value;
-  }
-
-
-	const addItem = (item) => {
-		const newPii = new PiiObject(item.piiKey, item.piiValue);
+	const addItem = (item: AddPiiFormData) => {
+		var newPii: PiiObject = {};
+		
+		newPii[ item.piiKey ] = item.piiValue;
 		console.log("Adding:", item, newPii);
 		
     updateUserCampaignInfo( newPii );
 	}// addItem()
 
 
-	const fetchItemByKey = (key) => {
+	const fetchItemByKey = (key: string) => {
 		const value = campaignUserInfo[key];
 		console.log("Fetch by key:", key, value);
 	}// fetchItem()
