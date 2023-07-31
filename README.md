@@ -18,6 +18,12 @@ the [Vatom Experience Kit](https://developer.vatom.com/wallet/experience-kit/ove
 
 ### Wish list:
 
+TS infinite scroll
+- https://medium.com/@stevelukis/infinite-scroll-in-react-typescript-react-query-db89640c615
+
+May be able to use a JS library in TS
+- https://medium.com/@steveruiz/using-a-javascript-library-without-type-declarations-in-a-typescript-project-3643490015f3
+
 Add scrollable list
 - https://github.com/jwarning/react-scrollable-list
   - yarn add react-scrollable-list
@@ -44,3 +50,7 @@ Add scrollable list
             </ListItemButton>
           </ListItem>
         </List>					
+
+Image buttons
+- https://stackoverflow.com/questions/36113367/how-to-make-image-buttons-in-jsx
+- see "If you're using React bootstrap button, typescript code work as below..."
