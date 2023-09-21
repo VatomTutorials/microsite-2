@@ -44,3 +44,7 @@
   border-bottom: #ddd solid 1px;
   pointer-events: none;
 }
+
+.elem-no-crop {
+	object-fit: scale-down;
+}

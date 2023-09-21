@@ -1,15 +1,14 @@
 {
   "name": "microsite",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite --base=/3UewHF0ge9/",
     "build": "tsc && vite build --base=/3UewHF0ge9/",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vatom/experience-sdk": "^0.0.6",
+    "@vatom/experience-sdk": "^0.0.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",

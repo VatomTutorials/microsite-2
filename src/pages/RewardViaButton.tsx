@@ -40,7 +40,7 @@ const RewardViaButtonPage = () => {
 		return (
 			<div>
 				<h3>list:</h3>
-				<div class="container">
+				<div className="container">
 					<ReactScrollableList
 						listItems={listItems}
 						heightOfItem={20}
